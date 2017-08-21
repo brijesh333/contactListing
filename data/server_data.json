@@ -1,0 +1,7 @@
+[
+    { "id": 1, "completed": false, "itemName": "Joe", "date": "October 1,2016 11:11:00" },
+    { "id": 2, "completed": false, "itemName": "Kate", "date": "October 2,2016 11:11:00" },
+    { "id": 3, "completed": false, "itemName": "Harry", "date": "October 3,2016 11:11:00" },
+    { "id": 4, "completed": false, "itemName": "Tom", "date": "October 4,2016 11:11:00" },
+    { "id": 5, "completed": false, "itemName": "Roger", "date": "October 5,2016 11:11:00" }
+]

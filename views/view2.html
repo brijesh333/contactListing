@@ -1,0 +1,99 @@
+<div class="col-xs-12">
+    <div class="jumbotron text-center">
+        <h1>Add New Contact</h1>
+    </div>
+    <form name="ContactForm">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-2">
+                    <span class="pull-right">First Name :- <span>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" id="firstName" name="firstName" class="form-control" ng-minlength="1" ng-pattern="/^[a-zA-Z\s]*$/" placeholder="First Name" ng-model="contactItems.firstName" required>
+                </div>
+                <div class="col-md-3">
+                    <div class="alert alert-danger" ng-show="ContactForm.firstName.$error.required">
+                        <strong>Required!</strong>
+                    </div>
+                    <div class="alert alert-danger" ng-show="ContactForm.firstName.$dirty&&ContactForm.firstName.$error.pattern">
+                        <strong>Valid name only!</strong>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="form-group">
+            <div class="row">
+                    <div class="col-md-3"></div>
+                <div class="col-md-2">
+                    <span class="pull-right">Last Name :-</span>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" id="lastName" name="lastName" class="form-control" ng-minlength="1" ng-pattern="/^[a-zA-Z\s]*$/" placeholder="Last Name" ng-model="contactItems.lastName" required>
+                </div>
+                <div class="col-md-3">
+                    <div class="alert alert-danger" ng-show="ContactForm.lastName.$error.required">
+                        <strong>Required!</strong>
+                    </div>
+                    <div class="alert alert-danger" ng-show="ContactForm.lastName.$dirty&&ContactForm.lastName.$error.pattern">
+                        <strong>Valid name only!</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-2">
+                    <span class="pull-right">Contact No :-</span>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" id="contactNo" name="contactNo" class="form-control" ng-minlength="9" ng-pattern="/^\d{3}-\d{3}-\d{4}$/" placeholder="Contact No" ng-model="contactItems.contactNumber" required>
+                </div>
+                <div class="col-md-3">
+                    <div class="alert alert-danger" ng-show="ContactForm.contactNo.$error.required">
+                        <strong>Required!</strong>
+                    </div>
+                    <div class="alert alert-danger" ng-show="ContactForm.contactNo.$dirty&&ContactForm.contactNo.$error.pattern">
+                        <strong>Valid contact no only! (XXX-XXX-XXXX)</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-2">
+                    <span class="pull-right">Contact Email :-</span>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" id="contactEmail" name="contactEmail" class="form-control" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" placeholder="Email Id" ng-model="contactItems.contactEmail" required>
+                </div>
+                <div class="col-md-3">
+                    <div class="alert alert-danger" ng-show="ContactForm.contactEmail.$error.required">
+                        <strong>Required!</strong>
+                    </div>
+                    <div class="alert alert-danger" ng-show="ContactForm.contactEmail.$dirty&&ContactForm.contactEmail.$error.pattern">
+                        <strong>Valid email only!</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+<div class="form-group">
+    <div class="col-md-4"></div>
+    <div class="col-md-2">
+        <button type="button" class="btn btn-success btn-lg btn-block" ng-click="ContactForm.$valid && save()">
+                    <span class="glyphicon glyphicon-ok"></span> Save
+                        </button>
+    </div>
+
+    <div class="col-md-2">
+        <a href="#/" class="btn btn-success btn-lg btn-block">
+            <span class="glyphicon glyphicon-remove"></span> Cancel
+        </a>
+    </div>
+</div>
+</form>
+</div>
