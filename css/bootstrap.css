@@ -8045,3 +8045,16 @@ button.close {
     padding-bottom: 6px !important;
     margin-bottom: 0px !important;
 }
+
+.userProfile {
+    font-size: 50px;
+    margin-top: 10px;
+}
+
+.infoLabel {
+    float: right;
+}
+
+.dataLabel {
+    float: left;
+}
