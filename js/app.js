@@ -81,10 +81,6 @@ app.service("ContactService", function($http) {
         contactService.contactItem.splice(index, 1);
     }
 
-    contactService.markCompleted = function(entry) {
-        entry.completed = !entry.completed;
-    }
-
     return contactService;
 });
 
@@ -95,10 +91,6 @@ app.controller('HomeController', ["$scope", "ContactService", function($scope, C
     $scope.removeItem = function(entry) {
         ContactService.removeItem(entry);
     };
-
-    $scope.markCompleted = function(entry) {
-        ContactService.markCompleted(entry);
-    }
 
     $scope.$watch(function() { return ContactService.contactItem; }, function(contactItem) {
         $scope.contactItem = contactItem;
